@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF><StartupObject>DuckDuckMove.App.Program</StartupObject><AssemblyName>DuckDuckMove</AssemblyName><Version>0.1.1</Version><ApplicationManifest>app.manifest</ApplicationManifest><PublishSingleFile>true</PublishSingleFile><SelfContained>true</SelfContained><IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract><DebugType>embedded</DebugType><EnableCompressionInSingleFile>true</EnableCompressionInSingleFile></PropertyGroup>
+ <PropertyGroup><ApplicationIcon>app.ico</ApplicationIcon></PropertyGroup>
+ <ItemGroup><EmbeddedResource Include="Assets/duck-default.gif" LogicalName="DuckDuckMove.DefaultGif"/><Resource Include="Assets/app-icon.png"/></ItemGroup>
+ <ItemGroup><ProjectReference Include="../DuckDuckMove.Core/DuckDuckMove.Core.csproj"/><PackageReference Include="XamlAnimatedGif" Version="2.3.2"/><PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.8"/></ItemGroup>
+</Project>

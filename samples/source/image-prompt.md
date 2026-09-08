@@ -1,0 +1,7 @@
+# 小鸭动作素材
+
+生成方式：内置 imagegen。以下为实际使用的生成提示词。
+
+Create a production-ready sprite sheet for a looping animated GIF avatar. Exactly 8 frames in a strict 4 columns by 2 rows grid, row-major order, square 1024x1024 canvas, each cell exactly 256x512 pixels. Transparent alpha background throughout, no background color, no checkerboard, no cell borders, no text, no labels. Each cell contains the same single adorable plump yellow duck, full body, orange short beak and little orange feet, small black dot eyes, a tiny upward curl on the head, clean charming sticker illustration with a thin warm dark-brown outline and soft simple shading. Front three-quarter view facing slightly right. Keep the same character proportions and scale in every cell: duck fits inside a 180x180 area centered at the exact center of each cell, leaving ample transparent space. Eight sequential animation poses of a gentle happy side-to-side sway, with its tiny wings slightly lifted and one subtle blink; smoothly return towards the first pose in frame 8. Draw real distinct animation poses, not eight identical ducks. No accessories, no scenery, no drop shadow. Crisp silhouette readable as a small Windows user avatar. All poses must remain centered and aligned on the same local baseline across cells. Use case: illustration-story; asset: transparent animation sprite sheet.
+
+输出整理：根据实际图片尺寸按 4×2 提取动作帧并对齐底边，以固定缩放比例编码为 256×256、8 帧、1.28 秒循环的透明 GIF。图标直接采用该 GIF 第一帧，叠加 #DBEAFE 圆角方形背景。

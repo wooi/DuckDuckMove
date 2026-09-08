@@ -1,0 +1,45 @@
+<Window x:Class="DuckDuckMove.App.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="DuckDuckMove" Icon="Assets/app-icon.png" Width="820" Height="690" MinWidth="700" MinHeight="640" WindowStartupLocation="CenterScreen" Background="{DynamicResource Page}" Foreground="{DynamicResource Ink}" FontFamily="Segoe UI, Microsoft YaHei" FontSize="14">
+ <Window.Resources>
+  <SolidColorBrush x:Key="Page" Color="#F5F6F8"/><SolidColorBrush x:Key="Panel" Color="White"/><SolidColorBrush x:Key="Ink" Color="#202329"/><SolidColorBrush x:Key="Muted" Color="#646B76"/><SolidColorBrush x:Key="Line" Color="#E1E5EC"/><SolidColorBrush x:Key="Accent" Color="#2965CF"/><SolidColorBrush x:Key="OnAccent" Color="White"/><SolidColorBrush x:Key="Scene" Color="#DCE5F4"/><SolidColorBrush x:Key="AvatarBg" Color="#E9EFFB"/>
+  <Style TargetType="Button"><Setter Property="Background" Value="{DynamicResource Panel}"/><Setter Property="Foreground" Value="{DynamicResource Ink}"/><Setter Property="BorderBrush" Value="{DynamicResource Line}"/><Setter Property="BorderThickness" Value="1"/><Setter Property="Padding" Value="15,9"/><Setter Property="Cursor" Value="Hand"/><Setter Property="MinHeight" Value="36"/><Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button"><Border x:Name="Frame" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" Padding="{TemplateBinding Padding}"><ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/></Border><ControlTemplate.Triggers><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="Frame" Property="Opacity" Value="0.82"/></Trigger><Trigger Property="IsPressed" Value="True"><Setter TargetName="Frame" Property="Opacity" Value="0.65"/></Trigger><Trigger Property="IsEnabled" Value="False"><Setter TargetName="Frame" Property="Opacity" Value="0.4"/></Trigger></ControlTemplate.Triggers></ControlTemplate></Setter.Value></Setter></Style>
+  <Style x:Key="SecondaryText" TargetType="TextBlock"><Setter Property="Foreground" Value="{DynamicResource Muted}"/><Setter Property="FontSize" Value="12"/><Setter Property="TextWrapping" Value="Wrap"/></Style>
+ </Window.Resources>
+ <Grid TextElement.Foreground="{DynamicResource Ink}" TextElement.FontFamily="Segoe UI, Microsoft YaHei" TextElement.FontSize="14">
+  <Grid.RowDefinitions><RowDefinition Height="48"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+  <Border BorderBrush="{DynamicResource Line}" BorderThickness="0,0,0,1" Padding="26,0"><DockPanel VerticalAlignment="Center"><Image Source="Assets/app-icon.png" Width="25" Height="25" Margin="0,0,9,0"/><TextBlock Text="DuckDuckMove" FontWeight="SemiBold" VerticalAlignment="Center"/><Button x:Name="ThemeButton" Content="外观：跟随系统" HorizontalAlignment="Right" Padding="10,3" MinHeight="28" BorderThickness="0" Background="Transparent" FontSize="12" Click="CycleTheme"/></DockPanel></Border>
+  <Grid Grid.Row="1" Margin="28,24,28,20">
+   <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+   <StackPanel><TextBlock Text="让头像，动起来。" FontSize="27" FontWeight="SemiBold"/><TextBlock Text="选一张喜欢的 GIF，给 Windows 换个表情。" Foreground="{DynamicResource Muted}" Margin="0,7,0,0"/></StackPanel>
+   <Grid Grid.Row="1" Margin="0,25,0,20">
+    <Grid.ColumnDefinitions><ColumnDefinition Width="1*"/><ColumnDefinition Width="22"/><ColumnDefinition Width="1.06*"/></Grid.ColumnDefinitions>
+    <StackPanel>
+     <TextBlock Text="你的动图" FontWeight="SemiBold" Margin="0,0,0,10"/>
+     <Border Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}" BorderThickness="1" CornerRadius="9" Padding="18" AllowDrop="True" Drop="DropGif" DragOver="DragGif">
+      <StackPanel HorizontalAlignment="Stretch">
+       <Grid Width="90" Height="90" HorizontalAlignment="Center"><Ellipse Fill="{DynamicResource AvatarBg}"/><TextBlock x:Name="SourcePlaceholder" Text="🦆" FontFamily="Segoe UI Emoji" FontSize="47" HorizontalAlignment="Center" VerticalAlignment="Center"/><Image x:Name="SourceImage" Stretch="UniformToFill" Width="90" Height="90"><Image.Clip><EllipseGeometry Center="45,45" RadiusX="45" RadiusY="45"/></Image.Clip></Image></Grid>
+       <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,10"><Button x:Name="ChooseButton" Content="＋  选择 GIF" Click="ChooseGif"/><Button x:Name="BuiltInButton" Content="用内置小鸭" FontSize="12" Padding="10,9" Margin="5,0,0,0" BorderThickness="0" Background="Transparent" Foreground="{DynamicResource Muted}" Click="UseBuiltInGif"/></StackPanel>
+       <TextBlock x:Name="FileLabel" Text="或将 GIF 拖到这里" Style="{StaticResource SecondaryText}" TextAlignment="Center" TextTrimming="CharacterEllipsis" MaxHeight="34"/>
+       <TextBlock x:Name="FileDetails" Text="最大 20 MB · 支持透明背景" Style="{StaticResource SecondaryText}" TextAlignment="Center" Margin="0,4,0,0"/>
+      </StackPanel>
+     </Border>
+     <Border Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}" BorderThickness="1" CornerRadius="8" Padding="13,10" Margin="0,12,0,0"><StackPanel><TextBlock x:Name="AccountLabel" Text="当前 Windows 账户" TextTrimming="CharacterEllipsis"/><TextBlock x:Name="SystemLabel" Style="{StaticResource SecondaryText}" Margin="0,3,0,0"/></StackPanel></Border>
+     <TextBlock Text="应用前自动备份，随时恢复原头像。" Style="{StaticResource SecondaryText}" Margin="0,12,0,0"/>
+    </StackPanel>
+    <StackPanel Grid.Column="2">
+     <TextBlock Text="效果预览" FontWeight="SemiBold" Margin="0,0,0,10"/>
+     <Border Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}" BorderThickness="1" CornerRadius="7" Padding="3"><UniformGrid Columns="2"><Button x:Name="LoginTab" Content="登录界面" BorderThickness="0" FontSize="12" Padding="8,5" MinHeight="30" Click="ShowLogin"/><Button x:Name="StartTab" Content="开始菜单" BorderThickness="0" FontSize="12" Padding="8,5" MinHeight="30" Click="ShowStart"/></UniformGrid></Border>
+     <Border x:Name="PreviewScene" Background="{DynamicResource Scene}" CornerRadius="9" Height="258" Margin="0,12,0,0" Padding="20">
+      <StackPanel x:Name="PreviewContent" HorizontalAlignment="Center" VerticalAlignment="Center">
+       <Grid x:Name="PreviewAvatar" Width="94" Height="94" HorizontalAlignment="Center"><Ellipse Fill="{DynamicResource AvatarBg}"/><TextBlock x:Name="PreviewPlaceholder" Text="🦆" FontFamily="Segoe UI Emoji" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/><Image x:Name="PreviewImage" Stretch="UniformToFill" Width="94" Height="94"><Image.Clip><EllipseGeometry x:Name="PreviewClip" Center="47,47" RadiusX="47" RadiusY="47"/></Image.Clip></Image></Grid>
+       <TextBlock x:Name="PreviewName" Text="你的名字" FontSize="19" FontWeight="SemiBold" HorizontalAlignment="Center" TextTrimming="CharacterEllipsis" MaxWidth="240" Margin="0,11,0,12"/>
+       <Border x:Name="PinField" Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Accent}" BorderThickness="0,0,0,2" CornerRadius="4" Width="155" Padding="11,6"><DockPanel><TextBlock Text="PIN" Foreground="{DynamicResource Muted}" FontSize="12"/><TextBlock Text="→" HorizontalAlignment="Right"/></DockPanel></Border>
+      </StackPanel>
+     </Border>
+     <TextBlock Text="布局示意，实际效果以 Windows 为准" Style="{StaticResource SecondaryText}" TextAlignment="Center" Margin="0,9,0,0"/>
+    </StackPanel>
+   </Grid>
+   <Border Grid.Row="2" BorderBrush="{DynamicResource Line}" BorderThickness="0,1,0,0" Padding="0,18,0,0"><Grid><Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><Button x:Name="DefaultButton" Content="恢复默认头像" Click="ResetDefault" ToolTip="换回 Windows 默认的人形头像，保留原头像备份。"/><Button x:Name="RestoreButton" Grid.Column="1" Content="恢复原头像" Margin="10,0,0,0" Background="Transparent" BorderThickness="0" Foreground="{DynamicResource Muted}" Click="RestoreOriginal" ToolTip="恢复首次使用 DuckDuckMove 更改前的头像。"/><Button x:Name="ApplyButton" Grid.Column="3" Content="应用动图头像" Background="{DynamicResource Accent}" Foreground="{DynamicResource OnAccent}" BorderThickness="0" MinWidth="140" Click="ApplyGif"/></Grid></Border>
+   <StackPanel Grid.Row="3" Margin="0,12,0,0"><TextBlock x:Name="StatusLabel" Text="应用或恢复时，需要确认 Windows 管理员授权。" Style="{StaticResource SecondaryText}" AutomationProperties.LiveSetting="Polite"/><Button x:Name="RecoverButton" Content="恢复上次未完成的操作" Visibility="Collapsed" HorizontalAlignment="Left" Margin="0,8,0,0" Click="Recover"/></StackPanel>
+  </Grid>
+ </Grid>
+</Window>

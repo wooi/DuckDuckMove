@@ -1,0 +1,6 @@
+**/bin/
+**/obj/
+dist/
+artifacts/
+setup.inf
+setup.rpt
