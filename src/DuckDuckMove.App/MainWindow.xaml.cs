@@ -46,7 +46,7 @@ public partial class MainWindow : Window
         else if (!Environment.Is64BitOperatingSystem || Environment.OSVersion.Version.Build < 22000)
         {
             SetStatus("此版本仅支持 Windows 11 64 位系统。");
-            ChooseButton.IsEnabled = RestoreMenuButton.IsEnabled = ApplyButton.IsEnabled = false;
+            ChooseButton.IsEnabled = DefaultButton.IsEnabled = ApplyButton.IsEnabled = false;
         }
         Closed += (_, _) => { Localization.Changed -= ApplyLanguage; AnimationBehavior.SetSourceUri(SourceImage, null); AnimationBehavior.SetSourceUri(PreviewImage, null); TryDeletePreview(); };
         Closing += (_, e) => { if (busy) { e.Cancel = true; SetStatus("正在完成头像操作，请稍候再关闭窗口。"); } };
@@ -112,7 +112,7 @@ public partial class MainWindow : Window
     {
         bool available = !busy && (demo || Environment.Is64BitOperatingSystem && Environment.OSVersion.Version.Build >= 22000);
         ApplyButton.IsEnabled = available && selectedPath != null;
-        ChooseButton.IsEnabled = RestoreMenuButton.IsEnabled = available;
+        ChooseButton.IsEnabled = DefaultButton.IsEnabled = available;
         BuiltInButton.IsEnabled = available && !builtIn;
 
         RecoverButton.Visibility = !demo && File.Exists(Storage.At("Accounts", sid, "pending.json")) ? Visibility.Visible : Visibility.Collapsed;
@@ -121,29 +121,7 @@ public partial class MainWindow : Window
 
     }
     private async void ApplyGif(object sender, RoutedEventArgs e) => await Perform("apply");
-    private void OpenRestoreMenu(object sender, RoutedEventArgs e)
-    {
-        var menu = CreateRestoreMenu();
-        RestoreMenuButton.ContextMenu = menu;
-        menu.IsOpen = true;
-    }
-    internal System.Windows.Controls.ContextMenu CreateRestoreMenu()
-    {
-        var menu = new System.Windows.Controls.ContextMenu { PlacementTarget = RestoreMenuButton, Placement = System.Windows.Controls.Primitives.PlacementMode.Top, Background = (Brush)Resources["Panel"], Foreground = (Brush)Resources["Ink"] };
-        void Add(string title, string description, string action, bool enabled)
-        {
-            var header = new System.Windows.Controls.StackPanel { MaxWidth = 310, Margin = new Thickness(0, 5, 0, 5) };
-            header.Children.Add(new System.Windows.Controls.TextBlock { Text = Localization.T(title) });
-            header.Children.Add(new System.Windows.Controls.TextBlock { Text = Localization.T(description), FontSize = 12, Foreground = (Brush)Resources["Muted"], TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 4, 0, 0) });
-            var item = new System.Windows.Controls.MenuItem { Header = header, IsEnabled = enabled && !busy };
-            item.Click += async (_, _) => await Perform(action);
-            menu.Items.Add(item);
-        }
-        bool hasBackup = demo || File.Exists(Storage.At("Accounts", sid, "original.json"));
-        Add("恢复原头像", hasBackup ? "回到首次修改前的头像" : "尚无原头像备份", "restore", hasBackup);
-        Add("恢复默认头像", "换回 Windows 默认人形图标", "default", true);
-        return menu;
-    }
+    private async void ResetDefault(object sender, RoutedEventArgs e) => await Perform("default");
     private async void Recover(object sender, RoutedEventArgs e) => await Perform("recover");
     private async Task Perform(string action)
     {
@@ -233,7 +211,7 @@ public partial class MainWindow : Window
         SetStatus(statusSource);
         ApplyTheme();
         // Refresh string presenters as well as their parents when resources change live.
-        foreach (var (button, source) in new[] { (ChooseButton, "＋  选择 GIF"), (BuiltInButton, "用内置小鸭"), (RestoreMenuButton, "恢复头像  ▾"), (ApplyButton, "应用动图头像"), (LoginTab, "登录界面"), (StartTab, "开始菜单"), (RecoverButton, "恢复上次未完成的操作") })
+        foreach (var (button, source) in new[] { (ChooseButton, "＋  选择 GIF"), (BuiltInButton, "用内置小鸭"), (DefaultButton, "恢复默认头像"), (ApplyButton, "应用动图头像"), (LoginTab, "登录界面"), (StartTab, "开始菜单"), (RecoverButton, "恢复上次未完成的操作") })
         {
             var label = new System.Windows.Controls.TextBlock { Text = Localization.T(source), TextWrapping = TextWrapping.NoWrap, FontFamily = button.FontFamily, FontSize = button.FontSize };
             label.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));

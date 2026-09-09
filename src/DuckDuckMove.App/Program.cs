@@ -52,7 +52,7 @@ internal static class Program
                 string second = PixelHash(window.PreviewImage.Source);
                 bool gifPlayback = first != "" && second != first;
                 bool applyEnabled = window.ApplyButton.IsEnabled;
-                ((System.Windows.Controls.MenuItem)window.CreateRestoreMenu().Items[1]).RaiseEvent(new RoutedEventArgs(System.Windows.Controls.MenuItem.ClickEvent));
+                window.DefaultButton.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
                 Pump(500);
                 bool defaultPreview = PixelHash(window.PreviewImage.Source) != second && window.StatusLabel.Text.Contains("演示完成");
                 window.ApplyButton.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
@@ -65,7 +65,7 @@ internal static class Program
                 if (!startupDefault || !gifPlayback || !applyEnabled || !defaultPreview || !applyPreview || !returnToBuiltIn) return 5;
             }
             window.BuiltInButton.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
-            if (window.StatusLabel.Visibility != Visibility.Collapsed || window.CreateRestoreMenu().Items.Count != 2) return 8;
+            if (window.StatusLabel.Visibility != Visibility.Collapsed) return 8;
             foreach (var (name, theme, start) in new[] { ("light-login", 1, false), ("dark-login", 2, false), ("light-start", 1, true) })
             {
                 window.ApplyTheme(theme); window.SetScene(start);

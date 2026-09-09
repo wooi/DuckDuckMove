@@ -9,7 +9,7 @@
 或将 GIF 拖到这里¦或將 GIF 拖到這裡¦Or drop a GIF here¦ここに GIF をドロップ¦O arrastra un GIF aquí¦Ou arraste um GIF para aqui
 最大 20 MB · 支持透明背景¦最大 20 MB · 支援透明背景¦Up to 20 MB · Transparency supported¦最大 20 MB · 透過対応¦Hasta 20 MB · Admite transparencia¦Até 20 MB · Suporta transparência
 当前 Windows 账户¦目前的 Windows 帳戶¦Current Windows account¦現在の Windows アカウント¦Cuenta actual de Windows¦Conta atual do Windows
-应用前自动备份，随时恢复原头像。¦套用前自動備份，隨時還原原頭像。¦Backed up before applying. Restore your original anytime.¦適用前に自動バックアップ。元の画像にいつでも戻せます。¦Copia de seguridad automática antes de aplicar. Restaura el original cuando quieras.¦Cópia de segurança antes de aplicar. Restaure o original quando quiser.
+应用前自动备份，可恢复 Windows 默认头像。¦套用前自動備份，可還原 Windows 預設頭像。¦Backed up before applying. Reset to the Windows default anytime.¦適用前に自動バックアップ。Windows 既定の画像に戻せます。¦Copia de seguridad antes de aplicar. Puedes volver al avatar predeterminado.¦Cópia de segurança antes de aplicar. Pode voltar ao avatar predefinido.
 效果预览¦效果預覽¦Preview¦プレビュー¦Vista previa¦Pré-visualização
 登录界面¦登入畫面¦Sign-in screen¦サインイン画面¦Inicio de sesión¦Início de sessão
 开始菜单¦開始功能表¦Start menu¦スタートメニュー¦Menú Inicio¦Menu Iniciar
