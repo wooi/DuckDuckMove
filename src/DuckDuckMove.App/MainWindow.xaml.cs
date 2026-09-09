@@ -192,7 +192,15 @@ public partial class MainWindow : Window
         string[] names = ["Page", "Panel", "Ink", "Muted", "Line", "Accent", "OnAccent", "Scene", "AvatarBg"];
         string[] colors = dark ? ["#202124", "#2B2C30", "#F2F3F5", "#B2B6C0", "#42444B", "#96BDFF", "#132743", "#28374E", "#344057"] : ["#F5F6F8", "#FFFFFF", "#202329", "#646B76", "#E1E5EC", "#2965CF", "#FFFFFF", "#DCE5F4", "#E9EFFB"];
         for (int i = 0; i < names.Length; i++) Resources[names[i]] = new SolidColorBrush((Color)ColorConverter.ConvertFromString(colors[i]));
-        ThemeButton.Content = "外观：" + (theme == 0 ? "跟随系统" : dark ? "深色" : "浅色");
+        string themeName = theme == 0 ? "跟随系统" : dark ? "深色" : "浅色";
+        ThemeButton.ToolTip = "外观：" + themeName + " · 点击切换";
+        System.Windows.Automation.AutomationProperties.SetName(ThemeButton, "切换外观，当前" + themeName);
+        ThemeGlyph.Data = Geometry.Parse(theme switch
+        {
+            1 => "M16,12 A4,4 0 1 1 8,12 A4,4 0 1 1 16,12 M12,2 L12,4 M12,20 L12,22 M2,12 L4,12 M20,12 L22,12 M4.9,4.9 L6.3,6.3 M17.7,17.7 L19.1,19.1 M4.9,19.1 L6.3,17.7 M17.7,6.3 L19.1,4.9",
+            2 => "M20.5,14 A8.8,8.8 0 1 1 10,3.5 A7,7 0 0 0 20.5,14 Z",
+            _ => "M5,4 L19,4 Q21,4 21,6 L21,15 Q21,17 19,17 L5,17 Q3,17 3,15 L3,6 Q3,4 5,4 Z M12,17 L12,21 M8,21 L16,21"
+        });
         SetScene(startPreview);
     }
 }
