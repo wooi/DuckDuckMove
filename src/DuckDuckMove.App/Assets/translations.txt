@@ -1,0 +1,98 @@
+跟随系统¦跟隨系統¦Follow system¦システムに合わせる¦Seguir el sistema¦Seguir o sistema
+语言¦語言¦Language¦言語¦Idioma¦Idioma
+语言已切换，但无法保存偏好。¦語言已切換，但無法儲存偏好。¦Language changed, but the preference could not be saved.¦言語を変更しましたが、設定を保存できませんでした。¦Idioma cambiado, pero no se pudo guardar la preferencia.¦Idioma alterado, mas não foi possível guardar a preferência.
+让头像，动起来。¦讓頭像，動起來。¦Bring your avatar to life.¦アイコンに、動きを。¦Dale vida a tu avatar.¦Dê vida ao seu avatar.
+选一张喜欢的 GIF，给 Windows 换个表情。¦選一張喜歡的 GIF，給 Windows 換個表情。¦Choose a GIF and give Windows a new expression.¦お気に入りの GIF で、Windows に新しい表情を。¦Elige un GIF y dale otra expresión a Windows.¦Escolha um GIF e dê uma nova expressão ao Windows.
+你的动图¦你的動圖¦Your GIF¦あなたの GIF¦Tu GIF¦O seu GIF
+＋  选择 GIF¦＋  選擇 GIF¦＋  Choose GIF¦＋  GIF を選択¦＋  Elegir GIF¦＋  Escolher GIF
+用内置小鸭¦用內建小鴨¦Use duck¦小鴨を使う¦Usar patito¦Usar patinho
+或将 GIF 拖到这里¦或將 GIF 拖到這裡¦Or drop a GIF here¦ここに GIF をドロップ¦O arrastra un GIF aquí¦Ou arraste um GIF para aqui
+最大 20 MB · 支持透明背景¦最大 20 MB · 支援透明背景¦Up to 20 MB · Transparency supported¦最大 20 MB · 透過対応¦Hasta 20 MB · Admite transparencia¦Até 20 MB · Suporta transparência
+当前 Windows 账户¦目前的 Windows 帳戶¦Current Windows account¦現在の Windows アカウント¦Cuenta actual de Windows¦Conta atual do Windows
+应用前自动备份，随时恢复原头像。¦套用前自動備份，隨時還原原頭像。¦Backed up before applying. Restore your original anytime.¦適用前に自動バックアップ。元の画像にいつでも戻せます。¦Copia de seguridad automática antes de aplicar. Restaura el original cuando quieras.¦Cópia de segurança antes de aplicar. Restaure o original quando quiser.
+效果预览¦效果預覽¦Preview¦プレビュー¦Vista previa¦Pré-visualização
+登录界面¦登入畫面¦Sign-in screen¦サインイン画面¦Inicio de sesión¦Início de sessão
+开始菜单¦開始功能表¦Start menu¦スタートメニュー¦Menú Inicio¦Menu Iniciar
+你的名字¦你的名字¦Your name¦あなたの名前¦Tu nombre¦O seu nome
+布局示意，实际效果以 Windows 为准¦版面示意，實際效果以 Windows 為準¦Layout preview; actual Windows appearance may differ¦レイアウトの例です。実際の表示は Windows によって異なります¦Diseño orientativo; el aspecto real depende de Windows¦Pré-visualização do esquema; o resultado depende do Windows
+恢复默认头像¦還原預設頭像¦Reset to default¦既定に戻す¦Usar predeterminado¦Usar predefinido
+恢复原头像¦還原原頭像¦Restore original¦元に戻す¦Restaurar original¦Restaurar original
+应用动图头像¦套用動態頭像¦Apply avatar¦適用する¦Aplicar avatar¦Aplicar avatar
+换回 Windows 默认的人形头像，保留原头像备份。¦換回 Windows 預設的人形頭像，保留原頭像備份。¦Use the default Windows silhouette and keep your original backup.¦Windows 既定の画像に戻します。元の画像のバックアップは残ります。¦Usa la silueta de Windows y conserva la copia del original.¦Use a silhueta do Windows e mantenha a cópia do original.
+恢复首次使用 DuckDuckMove 更改前的头像。¦還原首次使用 DuckDuckMove 變更前的頭像。¦Restore the avatar from before your first change with DuckDuckMove.¦DuckDuckMove で最初に変更する前の画像に戻します。¦Restaura el avatar anterior al primer cambio con DuckDuckMove.¦Restaure o avatar anterior à primeira alteração com DuckDuckMove.
+应用或恢复时，需要确认 Windows 管理员授权。¦套用或還原時，需要確認 Windows 管理員授權。¦Applying or restoring requires Windows administrator approval.¦適用や復元には Windows 管理者の承認が必要です。¦Aplicar o restaurar requiere autorización de administrador.¦Aplicar ou restaurar requer autorização de administrador.
+恢复上次未完成的操作¦復原上次未完成的操作¦Recover interrupted operation¦未完了の操作を復元¦Recuperar operación interrumpida¦Recuperar operação interrompida
+动图播放失败：¦動圖播放失敗：¦GIF playback failed: ¦GIF の再生に失敗しました：¦No se pudo reproducir el GIF: ¦Falha ao reproduzir o GIF: 
+预览失败：¦預覽失敗：¦Preview failed: ¦プレビューに失敗しました：¦Error de vista previa: ¦Falha na pré-visualização: 
+界面演示模式 · 不修改系统。¦介面示範模式 · 不修改系統。¦Demo mode · No system changes.¦デモモード · システムは変更されません。¦Modo de demostración · Sin cambios en el sistema.¦Modo de demonstração · Sem alterações no sistema.
+此版本仅支持 Windows 11 64 位系统。¦此版本僅支援 Windows 11 64 位元系統。¦This version requires 64-bit Windows 11.¦このバージョンは 64 ビットの Windows 11 専用です。¦Esta versión requiere Windows 11 de 64 bits.¦Esta versão requer Windows 11 de 64 bits.
+正在完成头像操作，请稍候再关闭窗口。¦正在完成頭像操作，請稍候再關閉視窗。¦Please wait for the avatar operation before closing.¦画像の処理が終わるまで、ウィンドウを閉じずにお待ちください。¦Espera a que termine la operación antes de cerrar.¦Aguarde a conclusão da operação antes de fechar.
+GIF 动图 (*.gif)|*.gif¦GIF 動圖 (*.gif)|*.gif¦Animated GIF (*.gif)|*.gif¦GIF アニメーション (*.gif)|*.gif¦GIF animado (*.gif)|*.gif¦GIF animado (*.gif)|*.gif
+选择你的动图头像¦選擇你的動態頭像¦Choose your animated avatar¦動くアイコンを選択¦Elige tu avatar animado¦Escolha o seu avatar animado
+GIF 不能超过 20 MB。¦GIF 不能超過 20 MB。¦The GIF must not exceed 20 MB.¦GIF は 20 MB 以下にしてください。¦El GIF no puede superar los 20 MB.¦O GIF não pode exceder 20 MB.
+无法载入：¦無法載入：¦Could not load: ¦読み込めません：¦No se pudo cargar: ¦Não foi possível carregar: 
+内置动图缺失。¦內建動圖遺失。¦The built-in GIF is missing.¦内蔵 GIF が見つかりません。¦Falta el GIF incluido.¦O GIF incluído não foi encontrado.
+内置小鸭 · 默认动图¦內建小鴨 · 預設動圖¦Built-in duck · Default GIF¦内蔵の小鴨 · 既定の GIF¦Patito incluido · GIF predeterminado¦Patinho incluído · GIF predefinido
+无法载入内置动图：¦無法載入內建動圖：¦Could not load the built-in GIF: ¦内蔵 GIF を読み込めません：¦No se pudo cargar el GIF incluido: ¦Não foi possível carregar o GIF incluído: 
+{0} × {1} · {2} 帧 · {3:0.##} MB¦{0} × {1} · {2} 幀 · {3:0.##} MB¦{0} × {1} · {2} frames · {3:0.##} MB¦{0} × {1} · {2} フレーム · {3:0.##} MB¦{0} × {1} · {2} fotogramas · {3:0.##} MB¦{0} × {1} · {2} fotogramas · {3:0.##} MB
+预览已更新 · 当前为演示模式。¦預覽已更新 · 目前為示範模式。¦Preview updated · Demo mode.¦プレビューを更新しました · デモモード。¦Vista previa actualizada · Modo de demostración.¦Pré-visualização atualizada · Modo de demonstração.
+内置小鸭已就绪，可直接应用，也可以选择自己的 GIF。¦內建小鴨已就緒，可直接套用，也可以選擇自己的 GIF。¦Your duck is ready. Apply it or choose your own GIF.¦小鴨の準備ができました。適用するか、お好きな GIF を選べます。¦El patito está listo. Aplícalo o elige tu propio GIF.¦O patinho está pronto. Aplique-o ou escolha outro GIF.
+已准备好。应用时会先备份原头像。¦已準備好。套用時會先備份原頭像。¦Ready. Your original avatar will be backed up first.¦準備完了。適用前に元の画像をバックアップします。¦Listo. Primero se guardará una copia del avatar original.¦Pronto. Primeiro será guardada uma cópia do avatar original.
+正在等待 Windows 授权并处理头像…¦正在等待 Windows 授權並處理頭像…¦Waiting for Windows approval and processing your avatar…¦Windows の承認と画像の処理を待っています…¦Esperando autorización de Windows y procesando el avatar…¦A aguardar autorização do Windows e a processar o avatar…
+演示完成，未修改系统。¦示範完成，未修改系統。¦Demo complete. No system changes.¦デモが完了しました。システムは変更されていません。¦Demostración completada. Sin cambios en el sistema.¦Demonstração concluída. Sem alterações no sistema.
+无法启动权限辅助程序。¦無法啟動權限輔助程式。¦Could not start the elevated helper.¦管理者権限の補助プログラムを起動できません。¦No se pudo iniciar el asistente con permisos elevados.¦Não foi possível iniciar o assistente com privilégios elevados.
+操作未完成。没有收到辅助程序结果，系统可能阻止了服务启动。¦操作未完成。未收到輔助程式結果，系統可能阻止了服務啟動。¦No helper result received. Windows may have blocked the service.¦補助プログラムから結果が届きません。サービスがブロックされた可能性があります。¦No se recibió el resultado. Windows puede haber bloqueado el servicio.¦Não foi recebido o resultado. O Windows pode ter bloqueado o serviço.
+已取消管理员授权，未修改头像。¦已取消管理員授權，未修改頭像。¦Administrator approval canceled. Avatar unchanged.¦管理者の承認がキャンセルされました。画像は変更されていません。¦Autorización cancelada. No se cambió el avatar.¦Autorização cancelada. O avatar não foi alterado.
+操作未完成：¦操作未完成：¦Operation incomplete: ¦操作が完了しませんでした：¦Operación incompleta: ¦Operação incompleta: 
+深色¦深色¦Dark¦ダーク¦Oscuro¦Escuro
+浅色¦淺色¦Light¦ライト¦Claro¦Claro
+外观：{0} · 点击切换¦外觀：{0} · 點擊切換¦Appearance: {0} · Click to switch¦外観：{0} · クリックで切り替え¦Aspecto: {0} · Haz clic para cambiar¦Aspeto: {0} · Clique para mudar
+切换外观，当前{0}¦切換外觀，目前{0}¦Switch appearance, currently {0}¦外観を切り替え、現在は{0}¦Cambiar aspecto, actual: {0}¦Mudar aspeto, atual: {0}
+已刷新开始菜单。¦已重新整理開始功能表。¦Start menu reloaded.¦スタートメニューを再読み込みしました。¦Menú Inicio recargado.¦Menu Iniciar recarregado.
+下次打开开始菜单时查看头像。¦下次開啟開始功能表時查看頭像。¦Check your avatar when you next open Start.¦次にスタートメニューを開いて画像を確認してください。¦Comprueba el avatar al volver a abrir Inicio.¦Verifique o avatar ao abrir novamente o menu Iniciar.
+开始菜单刷新未完成（¦開始功能表重新整理未完成（¦Start menu reload incomplete (¦スタートメニューの再読み込みが完了しませんでした（¦No se completó la recarga de Inicio (¦A recarga do menu Iniciar não foi concluída (
+）。头像已保存，可注销后查看。¦）。頭像已儲存，可登出後查看。¦). Avatar saved; sign out and back in to check it.¦）。画像は保存済みです。サインインし直して確認してください。¦). Avatar guardado; cierra sesión y vuelve a entrar para verlo.¦). Avatar guardado; termine e inicie sessão para o verificar.
+程序遇到错误：¦程式發生錯誤：¦Application error: ¦アプリのエラー：¦Error de la aplicación: ¦Erro da aplicação: 
+头像配置已写入并核对。请在 Windows 界面查看实际效果；必要时手动锁屏或重新登录。¦頭像設定已寫入並核對。請在 Windows 介面查看實際效果；必要時手動鎖定螢幕或重新登入。¦Avatar settings saved and verified. Check the result in Windows; lock or sign in again if needed.¦画像の設定を保存し確認しました。Windows で表示を確認し、必要に応じてロックまたは再サインインしてください。¦Configuración guardada y verificada. Comprueba el resultado en Windows; bloquea o inicia sesión de nuevo si es necesario.¦Definições guardadas e verificadas. Verifique no Windows; bloqueie ou inicie sessão novamente se necessário.
+还没有原头像备份。¦尚無原頭像備份。¦No original avatar backup exists yet.¦元の画像のバックアップがまだありません。¦Aún no hay una copia del avatar original.¦Ainda não existe uma cópia do avatar original.
+设置失败，回滚也未完成；恢复记录已保留，请再次运行以恢复。¦設定失敗，復原也未完成；復原記錄已保留，請再次執行以復原。¦The change and rollback failed. Recovery data was kept; run the app again to recover.¦変更とロールバックに失敗しました。復元データは保持されています。再実行して復元してください。¦Fallaron el cambio y la reversión. Se conservaron los datos; vuelve a ejecutar para recuperar.¦A alteração e a reversão falharam. Os dados foram mantidos; execute novamente para recuperar.
+设置失败，已恢复操作前的头像配置。¦設定失敗，已還原操作前的頭像設定。¦The change failed. Previous avatar settings were restored.¦変更に失敗しました。操作前の画像設定に戻しました。¦El cambio falló. Se restauró la configuración anterior.¦A alteração falhou. As definições anteriores foram restauradas.
+头像配置读回校验失败。¦頭像設定讀回驗證失敗。¦Avatar settings failed read-back verification.¦画像設定の読み戻し検証に失敗しました。¦Falló la verificación de la configuración del avatar.¦Falha na verificação das definições do avatar.
+请选择有效的 GIF 文件，大小不超过 20 MB。¦請選擇有效的 GIF 檔案，大小不超過 20 MB。¦Choose a valid GIF no larger than 20 MB.¦20 MB 以下の有効な GIF を選んでください。¦Elige un GIF válido de hasta 20 MB.¦Escolha um GIF válido até 20 MB.
+GIF 宽高须在 1–2048 像素之间。¦GIF 寬高須在 1–2048 像素之間。¦GIF width and height must be between 1 and 2048 pixels.¦GIF の幅と高さは 1～2048 ピクセルにしてください。¦El ancho y alto deben estar entre 1 y 2048 píxeles.¦A largura e altura devem estar entre 1 e 2048 píxeis.
+GIF 文件不完整。¦GIF 檔案不完整。¦The GIF file is incomplete.¦GIF ファイルが不完全です。¦El archivo GIF está incompleto.¦O ficheiro GIF está incompleto.
+GIF 数据块不完整。¦GIF 資料區塊不完整。¦A GIF data block is incomplete.¦GIF のデータブロックが不完全です。¦Un bloque de datos GIF está incompleto.¦Um bloco de dados GIF está incompleto.
+这张 GIF 只有一帧，请选择动态 GIF。¦這張 GIF 只有一幀，請選擇動態 GIF。¦This GIF has only one frame. Choose an animated GIF.¦この GIF は 1 フレームのみです。アニメーション GIF を選んでください。¦Este GIF solo tiene un fotograma. Elige uno animado.¦Este GIF só tem um fotograma. Escolha um GIF animado.
+GIF 包含无效数据块。¦GIF 包含無效資料區塊。¦The GIF contains an invalid data block.¦GIF に無効なデータブロックが含まれています。¦El GIF contiene un bloque de datos no válido.¦O GIF contém um bloco de dados inválido.
+GIF 帧尺寸无效。¦GIF 幀尺寸無效。¦Invalid GIF frame dimensions.¦GIF のフレームサイズが無効です。¦Dimensiones de fotograma GIF no válidas.¦Dimensões de fotograma GIF inválidas.
+GIF 编码参数无效。¦GIF 編碼參數無效。¦Invalid GIF encoding parameters.¦GIF のエンコード設定が無効です。¦Parámetros de codificación GIF no válidos.¦Parâmetros de codificação GIF inválidos.
+动图过长或分辨率过高，请缩小后再试。¦動圖過長或解析度過高，請縮小後再試。¦The animation is too long or too large. Reduce it and try again.¦アニメーションが長すぎるか高解像度です。小さくして再試行してください。¦La animación es demasiado larga o grande. Redúcela e inténtalo de nuevo.¦A animação é demasiado longa ou grande. Reduza-a e tente novamente.
+GIF 缺少结束标记。¦GIF 缺少結束標記。¦The GIF is missing its end marker.¦GIF の終端マーカーがありません。¦Al GIF le falta el marcador final.¦Falta o marcador final do GIF.
+不支持的操作。¦不支援的操作。¦Unsupported operation.¦未対応の操作です。¦Operación no compatible.¦Operação não suportada.
+原窗口已关闭或会话不匹配。¦原視窗已關閉或工作階段不符。¦The original window closed or the session does not match.¦元のウィンドウが閉じられたか、セッションが一致しません。¦La ventana original se cerró o la sesión no coincide.¦A janela original foi fechada ou a sessão não corresponde.
+操作必须从 DuckDuckMove 窗口发起。¦操作必須從 DuckDuckMove 視窗發起。¦Start the operation from the DuckDuckMove window.¦DuckDuckMove のウィンドウから操作してください。¦Inicia la operación desde DuckDuckMove.¦Inicie a operação a partir do DuckDuckMove.
+无法识别当前账户。¦無法識別目前的帳戶。¦Could not identify the current account.¦現在のアカウントを識別できません。¦No se pudo identificar la cuenta actual.¦Não foi possível identificar a conta atual.
+不能修改系统服务账户的头像。¦不能修改系統服務帳戶的頭像。¦System service account avatars cannot be changed.¦システムサービスのアカウント画像は変更できません。¦No se pueden cambiar avatares de cuentas de servicio.¦Não é possível alterar avatares de contas de serviço.
+尚未选择 GIF。¦尚未選擇 GIF。¦No GIF selected.¦GIF が選択されていません。¦No se ha elegido un GIF.¦Nenhum GIF selecionado.
+组织策略强制使用默认头像，无法应用动图。¦組織原則強制使用預設頭像，無法套用動圖。¦Your organization requires the default avatar; animated avatars are blocked.¦組織のポリシーにより既定の画像が強制され、動く画像は適用できません。¦La política de tu organización exige el avatar predeterminado.¦A política da organização exige o avatar predefinido.
+GIF 超过 20 MB。¦GIF 超過 20 MB。¦The GIF exceeds 20 MB.¦GIF が 20 MB を超えています。¦El GIF supera los 20 MB.¦O GIF excede 20 MB.
+找不到程序文件。¦找不到程式檔案。¦Application file not found.¦アプリのファイルが見つかりません。¦No se encontró el archivo de la aplicación.¦Ficheiro da aplicação não encontrado.
+系统操作需使用 dist 中发布的独立 EXE。¦系統操作需使用 dist 中發佈的獨立 EXE。¦System operations require the published standalone EXE in dist.¦システム操作には dist 内の発行済み単体 EXE が必要です。¦Las operaciones del sistema requieren el EXE independiente de dist.¦As operações do sistema requerem o EXE independente em dist.
+辅助程序完整性检查失败。¦輔助程式完整性檢查失敗。¦Helper integrity check failed.¦補助プログラムの整合性検証に失敗しました。¦Falló la comprobación de integridad del asistente.¦Falha na verificação de integridade do assistente.
+辅助程序未返回结果；恢复记录已保留。¦輔助程式未傳回結果；復原記錄已保留。¦The helper returned no result; recovery data was kept.¦補助プログラムから結果が返りません。復元データは保持されています。¦El asistente no devolvió resultados; se conservaron los datos de recuperación.¦O assistente não devolveu resultados; os dados de recuperação foram mantidos.
+头像操作耗时过长。请稍后重新打开程序检查恢复状态。¦頭像操作耗時過長。請稍後重新開啟程式檢查復原狀態。¦The avatar operation timed out. Reopen the app later to check recovery status.¦画像の操作がタイムアウトしました。後でアプリを開き直し、復元状態を確認してください。¦La operación agotó el tiempo. Vuelve a abrir la aplicación para comprobar la recuperación.¦A operação excedeu o tempo limite. Reabra a aplicação para verificar a recuperação.
+辅助服务必须以 SYSTEM 身份执行。¦輔助服務必須以 SYSTEM 身分執行。¦The helper service must run as SYSTEM.¦補助サービスは SYSTEM として実行する必要があります。¦El servicio auxiliar debe ejecutarse como SYSTEM.¦O serviço auxiliar tem de ser executado como SYSTEM.
+操作编号不匹配。¦操作編號不符。¦Operation ID mismatch.¦操作 ID が一致しません。¦El identificador de operación no coincide.¦O identificador da operação não corresponde.
+组织策略强制使用默认头像。¦組織原則強制使用預設頭像。¦Your organization requires the default avatar.¦組織のポリシーにより既定の画像が強制されています。¦Tu organización exige el avatar predeterminado.¦A organização exige o avatar predefinido.
+动图路径不合法。¦動圖路徑不合法。¦Invalid GIF path.¦GIF のパスが無効です。¦Ruta de GIF no válida.¦Caminho do GIF inválido.
+不支持的头像操作。¦不支援的頭像操作。¦Unsupported avatar operation.¦未対応の画像操作です。¦Operación de avatar no compatible.¦Operação de avatar não suportada.
+无效的存储路径。¦無效的儲存路徑。¦Invalid storage path.¦保存先のパスが無効です。¦Ruta de almacenamiento no válida.¦Caminho de armazenamento inválido.
+存储目录不能包含符号链接或重解析点。¦儲存目錄不能包含符號連結或重新剖析點。¦The storage folder cannot contain symbolic links or reparse points.¦保存フォルダーにはシンボリックリンクや再解析ポイントを使用できません。¦La carpeta no puede contener enlaces simbólicos ni puntos de reanálisis.¦A pasta não pode conter ligações simbólicas nem pontos de reanálise.
+程序数据目录不可为链接。¦程式資料目錄不可為連結。¦The application data folder cannot be a link.¦アプリのデータフォルダーにリンクは使用できません。¦La carpeta de datos no puede ser un enlace.¦A pasta de dados não pode ser uma ligação.
+程序数据目录的所有者不可信，请检查 ¦程式資料目錄的擁有者不受信任，請檢查 ¦The data folder owner is not trusted. Check ¦データフォルダーの所有者を信頼できません。確認してください：¦El propietario de la carpeta no es de confianza. Comprueba ¦O proprietário da pasta não é de confiança. Verifique 
+备份文件为空。¦備份檔案為空。¦The backup file is empty.¦バックアップファイルが空です。¦El archivo de copia de seguridad está vacío.¦O ficheiro de cópia de segurança está vazio.
+头像注册表值类型异常：¦頭像登錄值類型異常：¦Unexpected avatar registry value type: ¦画像のレジストリ値の種類が異常です：¦Tipo de valor del registro inesperado: ¦Tipo de valor do registo inesperado: 
+拒绝写入非头像配置。¦拒絕寫入非頭像設定。¦Writing non-avatar settings is not allowed.¦画像以外の設定への書き込みは許可されていません。¦No se permite escribir ajustes ajenos al avatar.¦Não é permitido escrever definições alheias ao avatar.
+没有找到 Windows 默认头像文件。¦找不到 Windows 預設頭像檔案。¦The default Windows avatar file was not found.¦Windows 既定の画像ファイルが見つかりません。¦No se encontró el avatar predeterminado de Windows.¦O avatar predefinido do Windows não foi encontrado.
+原头像文件过大，无法完成备份。¦原頭像檔案過大，無法完成備份。¦The original avatar is too large to back up.¦元の画像が大きすぎるためバックアップできません。¦El avatar original es demasiado grande para guardar una copia.¦O avatar original é demasiado grande para criar uma cópia.
+原头像备份文件损坏。¦原頭像備份檔案損壞。¦The original avatar backup is damaged.¦元の画像のバックアップが破損しています。¦La copia del avatar original está dañada.¦A cópia do avatar original está danificada.

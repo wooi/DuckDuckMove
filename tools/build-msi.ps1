@@ -1,8 +1,8 @@
-param([string]$Version = '0.1.2')
+param([string]$Version = '0.1.3', [string]$PayloadDirectory = 'dist/win-x64')
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 $root = Split-Path -Parent $PSScriptRoot
-$payload = Join-Path $root 'dist/win-x64'
+$payload = Join-Path $root $PayloadDirectory
 $work = Join-Path $root 'artifacts/msi-build'
 $output = Join-Path $root "dist/DuckDuckMove-$Version-x64.msi"
 New-Item -ItemType Directory -Path $work -Force | Out-Null

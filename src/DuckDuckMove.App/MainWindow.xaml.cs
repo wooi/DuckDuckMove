@@ -20,30 +20,35 @@ public partial class MainWindow : Window
     private int theme;
     private readonly bool demo;
     private string? previewCopy;
+    private string statusSource = "";
+    private GifInfo? selectedInfo;
+    private void SetStatus(string source) { statusSource = source; StatusLabel.Text = Localization.T(source); }
     public MainWindow() : this(false) { }
     internal MainWindow(bool demo)
     {
         this.demo = demo;
         InitializeComponent();
-        AnimationBehavior.AddErrorHandler(SourceImage, (_, e) => { selectedPath = null; StatusLabel.Text = "动图播放失败：" + e.Exception.Message; RefreshActions(); });
-        AnimationBehavior.AddErrorHandler(PreviewImage, (_, e) => { StatusLabel.Text = "预览失败：" + e.Exception.Message; });
-        AccountLabel.Text = demo ? "当前 Windows 账户 · DuckDuck" : WindowsIdentity.GetCurrent().Name;
+        Localization.Changed += ApplyLanguage;
+        ApplyLanguage();
+        AnimationBehavior.AddErrorHandler(SourceImage, (_, e) => { selectedPath = null; SetStatus("动图播放失败：" + e.Exception.Message); RefreshActions(); });
+        AnimationBehavior.AddErrorHandler(PreviewImage, (_, e) => { SetStatus("预览失败：" + e.Exception.Message); });
+        AccountLabel.Text = demo ? Localization.T("当前 Windows 账户") + " · DuckDuck" : WindowsIdentity.GetCurrent().Name;
         PreviewName.Text = demo ? "DuckDuck" : Environment.UserName;
         SystemLabel.Text = "Windows " + (Environment.OSVersion.Version.Build >= 22000 ? "11" : "10") + " · " + Environment.OSVersion.Version.Build;
         ApplyTheme(); SetScene(false); LoadBuiltInGif(); RefreshActions();
-        if (demo) StatusLabel.Text = "界面演示模式 · 不修改系统。";
+        if (demo) SetStatus("界面演示模式 · 不修改系统。");
         else if (!Environment.Is64BitOperatingSystem || Environment.OSVersion.Version.Build < 22000)
         {
-            StatusLabel.Text = "此版本仅支持 Windows 11 64 位系统。";
+            SetStatus("此版本仅支持 Windows 11 64 位系统。");
             ChooseButton.IsEnabled = DefaultButton.IsEnabled = RestoreButton.IsEnabled = ApplyButton.IsEnabled = false;
         }
-        Closed += (_, _) => { AnimationBehavior.SetSourceUri(SourceImage, null); AnimationBehavior.SetSourceUri(PreviewImage, null); TryDeletePreview(); };
-        Closing += (_, e) => { if (busy) { e.Cancel = true; StatusLabel.Text = "正在完成头像操作，请稍候再关闭窗口。"; } };
+        Closed += (_, _) => { Localization.Changed -= ApplyLanguage; AnimationBehavior.SetSourceUri(SourceImage, null); AnimationBehavior.SetSourceUri(PreviewImage, null); TryDeletePreview(); };
+        Closing += (_, e) => { if (busy) { e.Cancel = true; SetStatus("正在完成头像操作，请稍候再关闭窗口。"); } };
     }
     private void TryDeletePreview() { if (previewCopy != null) { try { File.Delete(previewCopy); } catch (IOException) { } } }
     private void ChooseGif(object sender, RoutedEventArgs e)
     {
-        var picker = new OpenFileDialog { Filter = "GIF 动图 (*.gif)|*.gif", CheckFileExists = true, Multiselect = false, Title = "选择你的动图头像" };
+        var picker = new OpenFileDialog { Filter = Localization.T("GIF 动图 (*.gif)|*.gif"), CheckFileExists = true, Multiselect = false, Title = Localization.T("选择你的动图头像") };
         if (picker.ShowDialog(this) == true) LoadGif(picker.FileName);
     }
     private void DragGif(object sender, DragEventArgs e) { e.Effects = !busy && e.Data.GetDataPresent(DataFormats.FileDrop) ? DragDropEffects.Copy : DragDropEffects.None; e.Handled = true; }
@@ -60,7 +65,7 @@ public partial class MainWindow : Window
             var data = new byte[checked((int)input.Length)]; input.ReadExactly(data);
             LoadGifData(data, Path.GetFileName(path), false);
         }
-        catch (Exception ex) { StatusLabel.Text = "无法载入：" + ex.Message; }
+        catch (Exception ex) { SetStatus("无法载入：" + ex.Message); }
     }
     private void UseBuiltInGif(object sender, RoutedEventArgs e) => LoadBuiltInGif();
     private void LoadBuiltInGif()
@@ -72,7 +77,7 @@ public partial class MainWindow : Window
             using var buffer = new MemoryStream(); source.CopyTo(buffer);
             LoadGifData(buffer.ToArray(), "内置小鸭 · 默认动图", true);
         }
-        catch (Exception ex) { StatusLabel.Text = "无法载入内置动图：" + ex.Message; }
+        catch (Exception ex) { SetStatus("无法载入内置动图：" + ex.Message); }
     }
     private void LoadGifData(byte[] data, string displayName, bool isBuiltIn)
     {
@@ -91,9 +96,10 @@ public partial class MainWindow : Window
             AnimationBehavior.SetSourceUri(PreviewImage, new Uri(copy));
             SourcePlaceholder.Visibility = PreviewPlaceholder.Visibility = Visibility.Collapsed;
             builtIn = isBuiltIn;
-            FileLabel.Text = displayName;
-            FileDetails.Text = $"{info.Width} × {info.Height} · {info.Frames} 帧 · {info.Bytes / 1024d / 1024:0.##} MB";
-            StatusLabel.Text = demo ? "预览已更新 · 当前为演示模式。" : isBuiltIn ? "内置小鸭已就绪，可直接应用，也可以选择自己的 GIF。" : "已准备好。应用时会先备份原头像。";
+            FileLabel.Text = isBuiltIn ? Localization.T("内置小鸭 · 默认动图") : displayName;
+            selectedInfo = info;
+            UpdateFileDetails();
+            SetStatus(demo ? "预览已更新 · 当前为演示模式。" : isBuiltIn ? "内置小鸭已就绪，可直接应用，也可以选择自己的 GIF。" : "已准备好。应用时会先备份原头像。");
             RefreshActions();
     }
     private void RefreshActions()
@@ -116,7 +122,7 @@ public partial class MainWindow : Window
     {
         if (busy || action == "apply" && selectedPath == null) return;
         busy = true; RefreshActions();
-        StatusLabel.Text = "正在等待 Windows 授权并处理头像…";
+        SetStatus("正在等待 Windows 授权并处理头像…");
         try
         {
             if (demo)
@@ -124,7 +130,7 @@ public partial class MainWindow : Window
                 await Task.Delay(350);
                 if (action == "default") ShowStatic(WindowsAvatar.DefaultPath(192));
                 if (action == "apply" && selectedPath != null) { AnimationBehavior.SetSourceUri(PreviewImage, new Uri(selectedPath)); PreviewPlaceholder.Visibility = Visibility.Collapsed; }
-                StatusLabel.Text = "演示完成，未修改系统。";
+                SetStatus("演示完成，未修改系统。");
                 return;
             }
             string id = Guid.NewGuid().ToString("N");
@@ -136,10 +142,10 @@ public partial class MainWindow : Window
             await process.WaitForExitAsync();
             var resultFile = PrivilegeBroker.ResultPath(id);
             var result = File.Exists(resultFile) ? Storage.Read<OperationResult>(resultFile) : new(false, "操作未完成。没有收到辅助程序结果，系统可能阻止了服务启动。");
-            StatusLabel.Text = result.Message;
+            SetStatus(result.Message);
             if (result.Success)
             {
-                StatusLabel.Text = result.Message + " " + await StartMenuRefresh.RunAsync();
+                SetStatus(result.Message + " " + await StartMenuRefresh.RunAsync());
                 if (action == "apply" && selectedPath != null) { AnimationBehavior.SetSourceUri(PreviewImage, new Uri(selectedPath)); PreviewPlaceholder.Visibility = Visibility.Collapsed; }
                 else
                 {
@@ -149,8 +155,8 @@ public partial class MainWindow : Window
                 }
             }
         }
-        catch (Win32Exception ex) when (ex.NativeErrorCode == 1223) { StatusLabel.Text = "已取消管理员授权，未修改头像。"; }
-        catch (Exception ex) { StatusLabel.Text = "操作未完成：" + PrivilegeBroker.Explain(ex); }
+        catch (Win32Exception ex) when (ex.NativeErrorCode == 1223) { SetStatus("已取消管理员授权，未修改头像。"); }
+        catch (Exception ex) { SetStatus("操作未完成：" + PrivilegeBroker.Explain(ex)); }
         finally { busy = false; RefreshActions(); }
     }
     private void ShowStatic(string path)
@@ -183,6 +189,54 @@ public partial class MainWindow : Window
         LoginTab.SetResourceReference(ForegroundProperty, start ? "Muted" : "Accent");
         StartTab.SetResourceReference(ForegroundProperty, start ? "Accent" : "Muted");
     }
+
+    private void UpdateFileDetails()
+    {
+        if (selectedInfo is { } info) FileDetails.Text = Localization.Format("{0} × {1} · {2} 帧 · {3:0.##} MB", info.Width, info.Height, info.Frames, info.Bytes / 1024d / 1024);
+    }
+    private void ApplyLanguage()
+    {
+        int index = 0;
+        foreach (string key in Localization.Keys) Resources["loc" + index++] = Localization.T(key);
+        LanguageButton.ToolTip = Localization.T("语言") + " / Language";
+        System.Windows.Automation.AutomationProperties.SetName(LanguageButton, Localization.T("语言") + " / Language");
+        if (builtIn) FileLabel.Text = Localization.T("内置小鸭 · 默认动图");
+        if (demo) AccountLabel.Text = Localization.T("当前 Windows 账户") + " · DuckDuck";
+        UpdateFileDetails();
+        StatusLabel.Text = Localization.T(statusSource);
+        ApplyTheme();
+        // Refresh string presenters as well as their parents when resources change live.
+        foreach (var (button, source) in new[] { (ChooseButton, "＋  选择 GIF"), (BuiltInButton, "用内置小鸭"), (DefaultButton, "恢复默认头像"), (RestoreButton, "恢复原头像"), (ApplyButton, "应用动图头像"), (LoginTab, "登录界面"), (StartTab, "开始菜单"), (RecoverButton, "恢复上次未完成的操作") })
+        {
+            var label = new System.Windows.Controls.TextBlock { Text = Localization.T(source), TextWrapping = TextWrapping.NoWrap, FontFamily = button.FontFamily, FontSize = button.FontSize };
+            label.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+
+            button.Content = label;
+
+            button.InvalidateMeasure();
+        }
+        InvalidateMeasure();
+    }
+    private void OpenLanguages(object sender, RoutedEventArgs e)
+    {
+        var menu = CreateLanguageMenu();
+        LanguageButton.ContextMenu = menu;
+        menu.IsOpen = true;
+    }
+    internal System.Windows.Controls.ContextMenu CreateLanguageMenu()
+    {
+        var menu = new System.Windows.Controls.ContextMenu { PlacementTarget = LanguageButton, Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom, Background = (Brush)Resources["Panel"], Foreground = (Brush)Resources["Ink"] };
+        void Add(string code, string label)
+        {
+            var item = new System.Windows.Controls.MenuItem { Header = label, IsCheckable = true, IsChecked = Localization.Preference == code };
+            item.Click += (_, _) => { if (!Localization.Select(code, !demo)) SetStatus("语言已切换，但无法保存偏好。"); };
+            menu.Items.Add(item);
+        }
+        Add("system", Localization.T("跟随系统"));
+        menu.Items.Add(new System.Windows.Controls.Separator());
+        for (int i = 0; i < Localization.Codes.Length; i++) Add(Localization.Codes[i], Localization.Names[i]);
+        return menu;
+    }
     private void CycleTheme(object sender, RoutedEventArgs e) { theme = (theme + 1) % 3; ApplyTheme(); }
     internal void ApplyTheme(int? forced = null)
     {
@@ -192,9 +246,9 @@ public partial class MainWindow : Window
         string[] names = ["Page", "Panel", "Ink", "Muted", "Line", "Accent", "OnAccent", "Scene", "AvatarBg"];
         string[] colors = dark ? ["#202124", "#2B2C30", "#F2F3F5", "#B2B6C0", "#42444B", "#96BDFF", "#132743", "#28374E", "#344057"] : ["#F5F6F8", "#FFFFFF", "#202329", "#646B76", "#E1E5EC", "#2965CF", "#FFFFFF", "#DCE5F4", "#E9EFFB"];
         for (int i = 0; i < names.Length; i++) Resources[names[i]] = new SolidColorBrush((Color)ColorConverter.ConvertFromString(colors[i]));
-        string themeName = theme == 0 ? "跟随系统" : dark ? "深色" : "浅色";
-        ThemeButton.ToolTip = "外观：" + themeName + " · 点击切换";
-        System.Windows.Automation.AutomationProperties.SetName(ThemeButton, "切换外观，当前" + themeName);
+        string themeName = Localization.T(theme == 0 ? "跟随系统" : dark ? "深色" : "浅色");
+        ThemeButton.ToolTip = Localization.Format("外观：{0} · 点击切换", themeName);
+        System.Windows.Automation.AutomationProperties.SetName(ThemeButton, Localization.Format("切换外观，当前{0}", themeName));
         ThemeGlyph.Data = Geometry.Parse(theme switch
         {
             1 => "M16,12 A4,4 0 1 1 8,12 A4,4 0 1 1 16,12 M12,2 L12,4 M12,20 L12,22 M2,12 L4,12 M20,12 L22,12 M4.9,4.9 L6.3,6.3 M17.7,17.7 L19.1,19.1 M4.9,19.1 L6.3,17.7 M17.7,6.3 L19.1,4.9",
