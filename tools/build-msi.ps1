@@ -107,6 +107,9 @@ Add-Row 'Upgrade' @('UpgradeCode','VersionMin','Attributes','ActionProperty') @(
 $files = [Collections.Generic.List[object]]::new()
 $files.Add(@('DuckDuckMove.exe','INSTALLDIR','AppFile'))
 $files.Add(@('README.md','INSTALLDIR','ReadmeFile'))
+foreach ($readme in Get-ChildItem -Path (Join-Path $payload 'README.*.md') -File | Sort-Object Name) {
+    $files.Add(@($readme.Name,'INSTALLDIR',('Readme'+$files.Count)))
+}
 $files.Add(@('LICENSE','INSTALLDIR','LicenseFile'))
 Add-Row 'Directory' @('Directory','Directory_Parent','DefaultDir') @('DocsDir','INSTALLDIR','docs')
 Add-Row 'Directory' @('Directory','Directory_Parent','DefaultDir') @('ImagesDir','DocsDir','images')

@@ -8,6 +8,7 @@ try {
     & $Dotnet publish src/DuckDuckMove.App/DuckDuckMove.App.csproj -c Release -r win-x64 -o dist/win-x64
     if ($LASTEXITCODE -ne 0) { throw 'Publish failed.' }
     Copy-Item -LiteralPath README.md -Destination dist/win-x64/README.md
+    Get-ChildItem -Path README.*.md | Copy-Item -Destination dist/win-x64 -Force
     Copy-Item -LiteralPath LICENSE -Destination dist/win-x64/LICENSE
     Copy-Item -LiteralPath docs -Destination dist/win-x64 -Recurse -Force
     Copy-Item -LiteralPath third-party -Destination dist/win-x64 -Recurse -Force
