@@ -12,5 +12,7 @@ try {
     Copy-Item -LiteralPath docs -Destination dist/win-x64 -Recurse -Force
     Copy-Item -LiteralPath third-party -Destination dist/win-x64 -Recurse -Force
     Copy-Item -LiteralPath samples -Destination dist/win-x64 -Recurse -Force
-    Compress-Archive -Path dist/win-x64/* -DestinationPath dist/DuckDuckMove-0.1.1-win-x64.zip -Force
+    [xml]$project = Get-Content src/DuckDuckMove.App/DuckDuckMove.App.csproj
+    $version = ($project.Project.PropertyGroup | Where-Object Version | Select-Object -First 1).Version
+    Compress-Archive -Path dist/win-x64/* -DestinationPath "dist/DuckDuckMove-$version-win-x64.zip" -Force
 } finally { Pop-Location }

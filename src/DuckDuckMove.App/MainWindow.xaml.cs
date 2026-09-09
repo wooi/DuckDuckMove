@@ -27,8 +27,8 @@ public partial class MainWindow : Window
         InitializeComponent();
         AnimationBehavior.AddErrorHandler(SourceImage, (_, e) => { selectedPath = null; StatusLabel.Text = "动图播放失败：" + e.Exception.Message; RefreshActions(); });
         AnimationBehavior.AddErrorHandler(PreviewImage, (_, e) => { StatusLabel.Text = "预览失败：" + e.Exception.Message; });
-        AccountLabel.Text = WindowsIdentity.GetCurrent().Name;
-        PreviewName.Text = Environment.UserName;
+        AccountLabel.Text = demo ? "当前 Windows 账户 · DuckDuck" : WindowsIdentity.GetCurrent().Name;
+        PreviewName.Text = demo ? "DuckDuck" : Environment.UserName;
         SystemLabel.Text = "Windows " + (Environment.OSVersion.Version.Build >= 22000 ? "11" : "10") + " · " + Environment.OSVersion.Version.Build;
         ApplyTheme(); SetScene(false); LoadBuiltInGif(); RefreshActions();
         if (demo) StatusLabel.Text = "界面演示模式 · 不修改系统。";
@@ -105,11 +105,23 @@ public partial class MainWindow : Window
         RestoreButton.IsEnabled = available && (demo || File.Exists(Storage.At("Accounts", sid, "original.json")));
         RecoverButton.Visibility = !demo && File.Exists(Storage.At("Accounts", sid, "pending.json")) ? Visibility.Visible : Visibility.Collapsed;
         RecoverButton.IsEnabled = !busy;
+        RefreshStartButton.IsEnabled = available;
+        AutoRefreshStart.IsEnabled = available;
     }
     private async void ApplyGif(object sender, RoutedEventArgs e) => await Perform("apply");
     private async void ResetDefault(object sender, RoutedEventArgs e) => await Perform("default");
     private async void RestoreOriginal(object sender, RoutedEventArgs e) => await Perform("restore");
     private async void Recover(object sender, RoutedEventArgs e) => await Perform("recover");
+    private async void RefreshStart(object sender, RoutedEventArgs e)
+    {
+        if (busy) return;
+        busy = true; RefreshActions();
+        try
+        {
+            StatusLabel.Text = demo ? "演示模式：未刷新实际开始菜单。" : await StartMenuRefresh.RunAsync();
+        }
+        finally { busy = false; RefreshActions(); }
+    }
     private async Task Perform(string action)
     {
         if (busy || action == "apply" && selectedPath == null) return;
@@ -137,6 +149,8 @@ public partial class MainWindow : Window
             StatusLabel.Text = result.Message;
             if (result.Success)
             {
+                if (AutoRefreshStart.IsChecked == true)
+                    StatusLabel.Text = result.Message + " " + await StartMenuRefresh.RunAsync();
                 if (action == "apply" && selectedPath != null) { AnimationBehavior.SetSourceUri(PreviewImage, new Uri(selectedPath)); PreviewPlaceholder.Visibility = Visibility.Collapsed; }
                 else
                 {
