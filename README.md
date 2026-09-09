@@ -126,9 +126,14 @@ dotnet publish src/DuckDuckMove.App/DuckDuckMove.App.csproj -c Release -r win-x6
 
 - .NET 10 / WPF、System.ServiceProcess.ServiceController：MIT 等许可证，见 `third-party`。
 - XamlAnimatedGif 2.3.2：Apache-2.0，作者 Thomas Levesque，https://github.com/XamlAnimatedGif/XamlAnimatedGif
-- 实现思路来源：https://sspai.com/post/114312
 
 完整的依赖许可证随发行包提供。
+
+## 灵感与致谢
+
+DuckDuckMove 的实现思路参考了克莱德在少数派发表的 [《一日一技｜我的 Windows 11 头像会动，你也可以》](https://sspai.com/post/114312)。该文注明，选题灵感来自 [@Patrosi73](https://x.com/Patrosi73) 的 [推文](https://x.com/Patrosi73/status/2096652760494088376)，并在此基础上补充了工具配置细节。
+
+感谢 @Patrosi73 的分享，以及克莱德和少数派的教程。DuckDuckMove 将相关操作封装为图形界面，并加入备份、恢复系统默认头像、自动刷新和多语言支持。
 
 ## 卸载
 
