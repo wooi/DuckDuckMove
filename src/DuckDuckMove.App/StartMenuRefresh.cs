@@ -31,13 +31,13 @@ internal static class StartMenuRefresh
                 }
             }
             return stopped > 0
-                ? "已请求重新加载开始菜单，请按 Win 键查看底部头像。Microsoft 账户卡片不在支持范围内。"
-                : "未找到可刷新的开始菜单进程，请打开开始菜单后重试。";
+                ? "已刷新开始菜单。"
+                : "下次打开开始菜单时查看头像。";
         }
         catch (Exception ex)
         {
             // A refresh failure must never be reported as an avatar write failure.
-            return "开始菜单刷新未完成（" + ex.Message + "）。头像配置未撤销，可稍后手动重试。";
+            return "开始菜单刷新未完成（" + ex.Message + "）。头像已保存，可注销后查看。";
         }
     }
 }

@@ -105,23 +105,13 @@ public partial class MainWindow : Window
         RestoreButton.IsEnabled = available && (demo || File.Exists(Storage.At("Accounts", sid, "original.json")));
         RecoverButton.Visibility = !demo && File.Exists(Storage.At("Accounts", sid, "pending.json")) ? Visibility.Visible : Visibility.Collapsed;
         RecoverButton.IsEnabled = !busy;
-        RefreshStartButton.IsEnabled = available;
-        AutoRefreshStart.IsEnabled = available;
+
+
     }
     private async void ApplyGif(object sender, RoutedEventArgs e) => await Perform("apply");
     private async void ResetDefault(object sender, RoutedEventArgs e) => await Perform("default");
     private async void RestoreOriginal(object sender, RoutedEventArgs e) => await Perform("restore");
     private async void Recover(object sender, RoutedEventArgs e) => await Perform("recover");
-    private async void RefreshStart(object sender, RoutedEventArgs e)
-    {
-        if (busy) return;
-        busy = true; RefreshActions();
-        try
-        {
-            StatusLabel.Text = demo ? "演示模式：未刷新实际开始菜单。" : await StartMenuRefresh.RunAsync();
-        }
-        finally { busy = false; RefreshActions(); }
-    }
     private async Task Perform(string action)
     {
         if (busy || action == "apply" && selectedPath == null) return;
@@ -149,8 +139,7 @@ public partial class MainWindow : Window
             StatusLabel.Text = result.Message;
             if (result.Success)
             {
-                if (AutoRefreshStart.IsChecked == true)
-                    StatusLabel.Text = result.Message + " " + await StartMenuRefresh.RunAsync();
+                StatusLabel.Text = result.Message + " " + await StartMenuRefresh.RunAsync();
                 if (action == "apply" && selectedPath != null) { AnimationBehavior.SetSourceUri(PreviewImage, new Uri(selectedPath)); PreviewPlaceholder.Visibility = Visibility.Collapsed; }
                 else
                 {
