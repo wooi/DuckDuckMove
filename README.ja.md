@@ -2,7 +2,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Português](README.pt.md)
 
-<p align="center"><img src="src/DuckDuckMove.App/Assets/app-icon.png" width="96" alt="DuckDuckMove の小鴨アイコン"></p>
+<p align="center"><img src="docs/images/app-icon.png" width="96" alt="DuckDuckMove の小鴨アイコン"></p>
 
 **アイコンに、動きを。** Windows 11 のアカウント画像に GIF を設定するツールです。小鴨の GIF を内蔵し、ローカルで処理します。Windows 既定の画像に戻すこともできます。
 
@@ -10,14 +10,14 @@
 
 ## ダウンロード
 
-現在のソースコードは **v0.1.3** です。6 言語の UI と、適用・リセット後のスタートメニュー自動再読み込みを含みます。**公開中の v0.1.1 テスト版にはこれらの変更は含まれません。** Microsoft アカウントカードの画像同期には対応していません。[再読み込みについて](docs/START-MENU.md)もご覧ください。
+現在のリリースは **v0.1.3 プレビュー版** です。6 言語の UI と、適用・リセット後のスタートメニュー自動再読み込みを含みます。Microsoft アカウントカードの画像同期には対応していません。[再読み込みについて](docs/START-MENU.md)もご覧ください。
 
 リリースページの **Assets** から選んでください。
 
 | 種類 | ファイル | 使い方 |
 | --- | --- | --- |
-| インストーラー | `DuckDuckMove-0.1.1-x64.msi` | インストール後、スタートメニューから起動。デスクトップショートカットは任意で、Windows からアンインストール可能です。 |
-| ポータブル版 | `DuckDuckMove-0.1.1-win-x64.zip` | 展開して `DuckDuckMove.exe` を実行します。 |
+| インストーラー | `DuckDuckMove-0.1.3-x64.msi` | インストール後、スタートメニューから起動。デスクトップショートカットは任意で、Windows からアンインストール可能です。 |
+| ポータブル版 | `DuckDuckMove-0.1.3-win-x64.zip` | 展開して `DuckDuckMove.exe` を実行します。 |
 
 **Windows 11 x64** が必要です。どちらも .NET ランタイムを同梱しています。画像の適用・リセットには管理者の承認が必要です。ポータブル版も画像とバックアップをシステムのデータフォルダーに保存します。配布ファイルは未署名のテスト版であり、アカウントや Windows バージョンごとの互換性は検証中です。GitHub の **Source code** はソースコードで、実行用アプリではありません。
 

@@ -128,6 +128,12 @@ foreach ($language in Get-ChildItem -LiteralPath (Join-Path $payload 'docs/image
     }
 }
 $files.Add(@('samples/duckduckmove-duck.gif','SamplesDir','SampleDuck'))
+$files.Add(@('samples/orbit.gif','SamplesDir','SampleOrbit'))
+Add-Row 'Directory' @('Directory','Directory_Parent','DefaultDir') @('SampleSourceDir','SamplesDir','source')
+Add-Row 'RemoveFile' @('FileKey','Component_','DirProperty','InstallMode') @('RemoveSampleSource','CAppFile','SampleSourceDir',2)
+foreach ($sourceAsset in Get-ChildItem -LiteralPath (Join-Path $payload 'samples/source') -File | Sort-Object Name) {
+    $files.Add(@(('samples/source/'+$sourceAsset.Name),'SampleSourceDir',('SampleSource'+$files.Count)))
+}
 foreach ($notice in Get-ChildItem -LiteralPath (Join-Path $payload 'third-party') -File | Sort-Object Name) {
     $files.Add(@(('third-party/'+$notice.Name),'NoticesDir',('Notice'+$files.Count)))
 }

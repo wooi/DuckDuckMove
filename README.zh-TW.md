@@ -2,7 +2,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Português](README.pt.md)
 
-<p align="center"><img src="src/DuckDuckMove.App/Assets/app-icon.png" width="96" alt="DuckDuckMove 小鴨圖示"></p>
+<p align="center"><img src="docs/images/app-icon.png" width="96" alt="DuckDuckMove 小鴨圖示"></p>
 
 **讓頭像，動起來。** Windows 11 動態頭像工具，內建小鴨 GIF、本機處理、支援還原 Windows 預設頭像。
 
@@ -10,14 +10,14 @@
 
 ## 下載
 
-目前原始碼為 **v0.1.3 多語言測試版**，包含六種介面語言，以及套用或還原後自動重新載入開始功能表。公開的 **v0.1.1 測試版尚未包含這些改進**。Microsoft 帳戶卡片暫不支援同步，詳見 [重新整理機制](docs/START-MENU.md)。
+目前發行版本為 **v0.1.3 測試版**，包含六種介面語言，以及套用或還原後自動重新載入開始功能表。Microsoft 帳戶卡片暫不支援同步，詳見 [重新整理機制](docs/START-MENU.md)。
 
 到 Release 頁面的 **Assets** 選擇：
 
 | 版本 | 檔案 | 使用方式 |
 | --- | --- | --- |
-| 安裝版 | `DuckDuckMove-0.1.1-x64.msi` | 安裝後由開始功能表啟動，可選桌面捷徑，支援系統解除安裝 |
-| 免安裝版 | `DuckDuckMove-0.1.1-win-x64.zip` | 解壓縮後執行 `DuckDuckMove.exe` |
+| 安裝版 | `DuckDuckMove-0.1.3-x64.msi` | 安裝後由開始功能表啟動，可選桌面捷徑，支援系統解除安裝 |
+| 免安裝版 | `DuckDuckMove-0.1.3-win-x64.zip` | 解壓縮後執行 `DuckDuckMove.exe` |
 
 兩種版本皆需要 **Windows 11 x64**，已包含 .NET 執行階段。套用或還原需管理員授權；免安裝版也會將素材與備份儲存到系統資料目錄。發行檔案尚未簽署程式碼，不同帳戶和 Windows 版本的相容性仍待驗證。GitHub 的 **Source code** 壓縮檔是原始碼，不是可執行程式。
 

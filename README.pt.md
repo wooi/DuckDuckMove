@@ -2,7 +2,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Português](README.pt.md)
 
-<p align="center"><img src="src/DuckDuckMove.App/Assets/app-icon.png" width="96" alt="Ícone do patinho DuckDuckMove"></p>
+<p align="center"><img src="docs/images/app-icon.png" width="96" alt="Ícone do patinho DuckDuckMove"></p>
 
 **Dê vida ao seu avatar.** Avatares animados para Windows 11, com um GIF de patinho incluído, processamento local e reposição do avatar predefinido do Windows.
 
@@ -10,14 +10,14 @@
 
 ## Transferência
 
-O código atual é **v0.1.3**, com seis idiomas e recarga automática do menu Iniciar após aplicar ou repor o avatar. **A versão pública de teste v0.1.1 não inclui estas melhorias.** A sincronização do cartão da conta Microsoft não é suportada. Consulte as [notas sobre o menu Iniciar](docs/START-MENU.md).
+A versão atual é **v0.1.3 (de teste)**, com seis idiomas e recarga automática do menu Iniciar após aplicar ou repor o avatar. A sincronização do cartão da conta Microsoft não é suportada. Consulte as [notas sobre o menu Iniciar](docs/START-MENU.md).
 
 Na página da versão, escolha um ficheiro em **Assets**:
 
 | Pacote | Ficheiro | Utilização |
 | --- | --- | --- |
-| Instalador | `DuckDuckMove-0.1.1-x64.msi` | Instale e abra pelo menu Iniciar. Atalho de ambiente de trabalho opcional e desinstalação pelo Windows. |
-| Portátil | `DuckDuckMove-0.1.1-win-x64.zip` | Extraia e execute `DuckDuckMove.exe`. |
+| Instalador | `DuckDuckMove-0.1.3-x64.msi` | Instale e abra pelo menu Iniciar. Atalho de ambiente de trabalho opcional e desinstalação pelo Windows. |
+| Portátil | `DuckDuckMove-0.1.3-win-x64.zip` | Extraia e execute `DuckDuckMove.exe`. |
 
 Ambos requerem **Windows 11 x64** e incluem o runtime .NET. Aplicar ou repor o avatar requer autorização de administrador. A versão portátil também guarda imagens e cópias na pasta de dados do sistema. Os pacotes são versões de teste sem assinatura de código; a compatibilidade entre contas e versões do Windows continua em verificação. Os arquivos **Source code** do GitHub contêm código-fonte, não a aplicação executável.
 

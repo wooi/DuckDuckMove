@@ -2,7 +2,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Português](README.pt.md)
 
-<p align="center"><img src="src/DuckDuckMove.App/Assets/app-icon.png" width="96" alt="DuckDuckMove 小鸭图标"></p>
+<p align="center"><img src="docs/images/app-icon.png" width="96" alt="DuckDuckMove 小鸭图标"></p>
 
 <p align="center"><strong>让头像，动起来。</strong><br>Windows 11 动图头像工具 · 内置小鸭 GIF · 本地处理 · 可恢复</p>
 
@@ -10,18 +10,18 @@
 
 ## 下载
 
-当前源码为 **v0.1.3 多语言测试版**，包含应用或恢复后的自动刷新，以及六种界面语言。公开 Release v0.1.1 不含这些改进；底部头像即时刷新效果仍需实机验证，Microsoft 账户卡片暂不支持同步。详见 [刷新机制与验证范围](docs/START-MENU.md)。
+当前发布版本为 **v0.1.3 测试版**，包含应用或恢复后的自动刷新，以及六种界面语言。底部头像即时刷新效果仍需实机验证，Microsoft 账户卡片暂不支持同步。详见 [刷新机制与验证范围](docs/START-MENU.md)。
 
 前往 **[Release 下载页面](https://github.com/wooi/DuckDuckMove/releases)**，在版本下方的 **Assets** 中选择：
 
 | 版本 | 文件 | 使用方式 |
 | --- | --- | --- |
-| 安装版 | `DuckDuckMove-0.1.1-x64.msi` | 双击安装，从开始菜单启动；可选桌面快捷方式，支持系统卸载 |
-| 免安装版 | `DuckDuckMove-0.1.1-win-x64.zip` | 解压后双击 `DuckDuckMove.exe` |
+| 安装版 | `DuckDuckMove-0.1.3-x64.msi` | 双击安装，从开始菜单启动；可选桌面快捷方式，支持系统卸载 |
+| 免安装版 | `DuckDuckMove-0.1.3-win-x64.zip` | 解压后双击 `DuckDuckMove.exe` |
 
 两种版本功能相同，均自带 .NET 运行时。需要 **Windows 11 x64**，应用和恢复头像时需要管理员授权。ZIP 中的程序无需安装，但应用头像仍会把素材和备份保存到系统数据目录。
 
-**公开下载目前为 v0.1.1 测试版，尚未进行代码签名。不同账户和 Windows 版本的兼容性仍待验证。** 请阅读下方兼容性与验证状态；软件中的预览不代表 Windows 已应用成功。GitHub 自动生成的 Source code 压缩包是源码，不是可运行程序。
+**公开下载目前为 v0.1.3 测试版，尚未进行代码签名。不同账户和 Windows 版本的兼容性仍待验证。** 请阅读下方兼容性与验证状态；软件中的预览不代表 Windows 已应用成功。GitHub 自动生成的 Source code 压缩包是源码，不是可运行程序。
 
 ## 界面预览
 

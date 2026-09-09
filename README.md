@@ -2,7 +2,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Português](README.pt.md)
 
-<p align="center"><img src="src/DuckDuckMove.App/Assets/app-icon.png" width="96" alt="DuckDuckMove duck icon"></p>
+<p align="center"><img src="docs/images/app-icon.png" width="96" alt="DuckDuckMove duck icon"></p>
 
 **Bring your avatar to life.** A Windows 11 animated avatar tool with a built-in duck GIF, local processing and a reset to the Windows default avatar.
 
@@ -10,14 +10,14 @@
 
 ## Download
 
-The current source is **v0.1.3**, with six interface languages and automatic Start menu reload after applying or resetting an avatar. The public **v0.1.1 test release does not include these changes**. Microsoft account card synchronization is not supported. See [Start menu notes](docs/START-MENU.md).
+The current release is **v0.1.3 (preview)**, with six interface languages and automatic Start menu reload after applying or resetting an avatar. Microsoft account card synchronization is not supported. See [Start menu notes](docs/START-MENU.md).
 
 Open a release and choose a file under **Assets**:
 
 | Package | File | How to use |
 | --- | --- | --- |
-| Installer | `DuckDuckMove-0.1.1-x64.msi` | Install, then open from Start. Optional desktop shortcut and Windows uninstall support. |
-| Portable | `DuckDuckMove-0.1.1-win-x64.zip` | Extract and run `DuckDuckMove.exe`. |
+| Installer | `DuckDuckMove-0.1.3-x64.msi` | Install, then open from Start. Optional desktop shortcut and Windows uninstall support. |
+| Portable | `DuckDuckMove-0.1.3-win-x64.zip` | Extract and run `DuckDuckMove.exe`. |
 
 Both require **Windows 11 x64** and include the .NET runtime. Applying or resetting an avatar requires administrator approval. The portable app still saves avatar assets and backups to the system data folder. Files are unsigned test builds. Compatibility across accounts and Windows versions remains under verification. GitHub's **Source code** archives contain source, not the runnable app.
 
