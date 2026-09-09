@@ -52,7 +52,7 @@ internal static class Program
                 string second = PixelHash(window.PreviewImage.Source);
                 bool gifPlayback = first != "" && second != first;
                 bool applyEnabled = window.ApplyButton.IsEnabled;
-                window.DefaultButton.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
+                ((System.Windows.Controls.MenuItem)window.CreateRestoreMenu().Items[1]).RaiseEvent(new RoutedEventArgs(System.Windows.Controls.MenuItem.ClickEvent));
                 Pump(500);
                 bool defaultPreview = PixelHash(window.PreviewImage.Source) != second && window.StatusLabel.Text.Contains("演示完成");
                 window.ApplyButton.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
@@ -64,6 +64,8 @@ internal static class Program
                 File.WriteAllText(Path.Combine(args[1], "ui-checks.json"), System.Text.Json.JsonSerializer.Serialize(new { StartupDefault = startupDefault, GifPlayback = gifPlayback, ApplyEnabled = applyEnabled, DefaultPreview = defaultPreview, ApplyPreview = applyPreview, ReturnToBuiltIn = returnToBuiltIn }));
                 if (!startupDefault || !gifPlayback || !applyEnabled || !defaultPreview || !applyPreview || !returnToBuiltIn) return 5;
             }
+            window.BuiltInButton.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
+            if (window.StatusLabel.Visibility != Visibility.Collapsed || window.CreateRestoreMenu().Items.Count != 2) return 8;
             foreach (var (name, theme, start) in new[] { ("light-login", 1, false), ("dark-login", 2, false), ("light-start", 1, true) })
             {
                 window.ApplyTheme(theme); window.SetScene(start);

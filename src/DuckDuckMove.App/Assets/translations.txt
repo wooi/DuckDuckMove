@@ -96,3 +96,7 @@ GIF 超过 20 MB。¦GIF 超過 20 MB。¦The GIF exceeds 20 MB.¦GIF が 20 MB 
 没有找到 Windows 默认头像文件。¦找不到 Windows 預設頭像檔案。¦The default Windows avatar file was not found.¦Windows 既定の画像ファイルが見つかりません。¦No se encontró el avatar predeterminado de Windows.¦O avatar predefinido do Windows não foi encontrado.
 原头像文件过大，无法完成备份。¦原頭像檔案過大，無法完成備份。¦The original avatar is too large to back up.¦元の画像が大きすぎるためバックアップできません。¦El avatar original es demasiado grande para guardar una copia.¦O avatar original é demasiado grande para criar uma cópia.
 原头像备份文件损坏。¦原頭像備份檔案損壞。¦The original avatar backup is damaged.¦元の画像のバックアップが破損しています。¦La copia del avatar original está dañada.¦A cópia do avatar original está danificada.
+恢复头像  ▾¦還原頭像  ▾¦Restore avatar  ▾¦画像を戻す  ▾¦Restaurar avatar  ▾¦Restaurar avatar  ▾
+回到首次修改前的头像¦回到首次修改前的頭像¦Return to the avatar before your first change¦最初に変更する前の画像に戻す¦Vuelve al avatar anterior al primer cambio¦Volte ao avatar anterior à primeira alteração
+尚无原头像备份¦尚無原頭像備份¦No original avatar backup yet¦元の画像のバックアップはまだありません¦Aún no hay copia del avatar original¦Ainda não existe uma cópia do avatar original
+换回 Windows 默认人形图标¦換回 Windows 預設人形圖示¦Use the default Windows silhouette¦Windows 既定の人物アイコンに戻す¦Usa la silueta predeterminada de Windows¦Use a silhueta predefinida do Windows
