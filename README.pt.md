@@ -23,14 +23,14 @@ Ambos requerem **Windows 11 x64** e incluem o runtime .NET. Aplicar ou repor o a
 
 ## Pré-visualização
 
-Imagens geradas pela aplicação WPF real em modo de demonstração. O painel da direita ilustra o esquema; não é uma captura do ecrã de início de sessão do Windows. As capturas podem mostrar chinês, mas o idioma da aplicação pode ser alterado.
+Imagens geradas pela aplicação WPF real em modo de demonstração. O painel da direita ilustra o esquema; não é uma captura do ecrã de início de sessão do Windows. As capturas abaixo mostram a interface em português.
 
-![Interface clara](docs/images/light-login.png)
+![Interface clara](docs/images/pt/light-login.png)
 
 <details><summary>Interface escura e esquema do menu Iniciar</summary>
 
-![Interface escura](docs/images/dark-login.png)
-![Esquema do menu Iniciar](docs/images/light-start.png)
+![Interface escura](docs/images/pt/dark-login.png)
+![Esquema do menu Iniciar](docs/images/pt/light-start.png)
 
 </details>
 

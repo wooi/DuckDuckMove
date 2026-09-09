@@ -23,14 +23,14 @@ Ambos requieren **Windows 11 x64** e incluyen .NET. Aplicar o restablecer requie
 
 ## Vista previa
 
-Capturas generadas con la aplicación WPF real en modo de demostración. El panel derecho ilustra el diseño, no es una captura de la pantalla de inicio de sesión de Windows. Las imágenes pueden mostrar chino; el idioma de la aplicación se puede cambiar.
+Capturas generadas con la aplicación WPF real en modo de demostración. El panel derecho ilustra el diseño, no es una captura de la pantalla de inicio de sesión de Windows. Las capturas siguientes muestran la interfaz en español.
 
-![Interfaz clara](docs/images/light-login.png)
+![Interfaz clara](docs/images/es/light-login.png)
 
 <details><summary>Interfaz oscura y diseño de Inicio</summary>
 
-![Interfaz oscura](docs/images/dark-login.png)
-![Diseño de Inicio](docs/images/light-start.png)
+![Interfaz oscura](docs/images/es/dark-login.png)
+![Diseño de Inicio](docs/images/es/light-start.png)
 
 </details>
 

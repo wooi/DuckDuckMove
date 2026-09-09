@@ -23,14 +23,14 @@
 
 ## 介面預覽
 
-截圖由實際 WPF 應用程式的示範模式產生，右側是版面示意，不是 Windows 登入畫面的實機截圖。截圖可能顯示簡體中文，應用程式可切換語言。
+截圖由實際 WPF 應用程式的示範模式產生，右側是版面示意，不是 Windows 登入畫面的實機截圖。以下截圖為繁體中文介面。
 
-![淺色介面](docs/images/light-login.png)
+![淺色介面](docs/images/zh-TW/light-login.png)
 
 <details><summary>深色介面與開始功能表版面</summary>
 
-![深色介面](docs/images/dark-login.png)
-![開始功能表版面](docs/images/light-start.png)
+![深色介面](docs/images/zh-TW/dark-login.png)
+![開始功能表版面](docs/images/zh-TW/light-start.png)
 
 </details>
 

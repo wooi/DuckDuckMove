@@ -23,14 +23,14 @@
 
 ## プレビュー
 
-実際の WPF アプリをデモモードで描画した画像です。右側はレイアウトの例で、Windows サインイン画面の実機キャプチャではありません。スクリーンショットが中国語でも、アプリ内で言語を変更できます。
+実際の WPF アプリをデモモードで描画した画像です。右側はレイアウトの例で、Windows サインイン画面の実機キャプチャではありません。以下は日本語のインターフェイスです。
 
-![ライト表示](docs/images/light-login.png)
+![ライト表示](docs/images/ja/light-login.png)
 
 <details><summary>ダーク表示とスタートメニューのレイアウト</summary>
 
-![ダーク表示](docs/images/dark-login.png)
-![スタートメニュー](docs/images/light-start.png)
+![ダーク表示](docs/images/ja/dark-login.png)
+![スタートメニュー](docs/images/ja/light-start.png)
 
 </details>
 

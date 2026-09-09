@@ -119,6 +119,14 @@ foreach ($doc in Get-ChildItem -LiteralPath (Join-Path $payload 'docs') -File | 
 foreach ($shot in Get-ChildItem -LiteralPath (Join-Path $payload 'docs/images') -File | Sort-Object Name) {
     $files.Add(@(('docs/images/'+$shot.Name),'ImagesDir',('Shot'+$files.Count)))
 }
+foreach ($language in Get-ChildItem -LiteralPath (Join-Path $payload 'docs/images') -Directory | Sort-Object Name) {
+    $directoryId = 'Images' + $language.Name.Replace('-','')
+    Add-Row 'Directory' @('Directory','Directory_Parent','DefaultDir') @($directoryId,'ImagesDir',$language.Name)
+    Add-Row 'RemoveFile' @('FileKey','Component_','DirProperty','InstallMode') @(('Remove'+$directoryId),'CAppFile',$directoryId,2)
+    foreach ($shot in Get-ChildItem -LiteralPath $language.FullName -File | Sort-Object Name) {
+        $files.Add(@(('docs/images/'+$language.Name+'/'+$shot.Name),$directoryId,('Shot'+$files.Count)))
+    }
+}
 $files.Add(@('samples/duckduckmove-duck.gif','SamplesDir','SampleDuck'))
 foreach ($notice in Get-ChildItem -LiteralPath (Join-Path $payload 'third-party') -File | Sort-Object Name) {
     $files.Add(@(('third-party/'+$notice.Name),'NoticesDir',('Notice'+$files.Count)))

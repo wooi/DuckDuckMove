@@ -27,14 +27,14 @@
 
 以下截图由实际 WPF 应用的演示模式渲染，右侧为布局示意，不是 Windows 登录画面的实机截图。
 
-![浅色界面与登录布局预览](docs/images/light-login.png)
+![浅色界面与登录布局预览](docs/images/zh-CN/light-login.png)
 
 <details>
 <summary>查看深色界面和开始菜单布局</summary>
 
-![深色界面](docs/images/dark-login.png)
+![深色界面](docs/images/zh-CN/dark-login.png)
 
-![开始菜单布局预览](docs/images/light-start.png)
+![开始菜单布局预览](docs/images/zh-CN/light-start.png)
 
 </details>
 

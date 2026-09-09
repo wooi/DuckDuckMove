@@ -23,14 +23,14 @@ Both require **Windows 11 x64** and include the .NET runtime. Applying or resett
 
 ## Preview
 
-These screenshots are rendered from the actual WPF app in demo mode. The right panel is a layout illustration, not a capture of the Windows sign-in screen. Screenshots may show the Chinese interface; the app language is selectable.
+These screenshots are rendered from the actual WPF app in demo mode. The right panel is a layout illustration, not a capture of the Windows sign-in screen. The screenshots below show the English interface.
 
-![Light interface](docs/images/light-login.png)
+![Light interface](docs/images/en/light-login.png)
 
 <details><summary>Dark interface and Start layout</summary>
 
-![Dark interface](docs/images/dark-login.png)
-![Start layout](docs/images/light-start.png)
+![Dark interface](docs/images/en/dark-login.png)
+![Start layout](docs/images/en/light-start.png)
 
 </details>
 

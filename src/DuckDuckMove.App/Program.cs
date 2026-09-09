@@ -48,8 +48,12 @@ internal static class Program
             if (args.Length >= 2)
             {
                 string first = PixelHash(window.PreviewImage.Source);
-                Pump(110);
-                string second = PixelHash(window.PreviewImage.Source);
+                string second = first;
+                for (int attempt = 0; attempt < 8 && second == first; attempt++)
+                {
+                    Pump(110);
+                    second = PixelHash(window.PreviewImage.Source);
+                }
                 bool gifPlayback = first != "" && second != first;
                 bool applyEnabled = window.ApplyButton.IsEnabled;
                 window.DefaultButton.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
@@ -91,6 +95,18 @@ internal static class Program
                 var bitmap = new RenderTargetBitmap(844, 690, 96, 96, PixelFormats.Pbgra32); bitmap.Render(visual);
                 var png = new PngBitmapEncoder(); png.Frames.Add(BitmapFrame.Create(bitmap));
                 using var output = File.Create(Path.Combine(args[1], language + ".png")); png.Save(output);
+                string languageFolder = Path.Combine(args[1], language);
+                Directory.CreateDirectory(languageFolder);
+                foreach (var (scene, theme, start) in new[] { ("light-login", 1, false), ("dark-login", 2, false), ("light-start", 1, true) })
+                {
+                    window.ApplyTheme(theme); window.SetScene(start);
+                    visual.Background = (Brush)window.Resources["Page"];
+                    visual.Measure(new Size(844, 690)); visual.Arrange(new Rect(0, 0, 844, 690)); visual.UpdateLayout();
+                    Pump(250);
+                    var sceneBitmap = new RenderTargetBitmap(844, 690, 96, 96, PixelFormats.Pbgra32); sceneBitmap.Render(visual);
+                    var scenePng = new PngBitmapEncoder(); scenePng.Frames.Add(BitmapFrame.Create(sceneBitmap));
+                    using var sceneOutput = File.Create(Path.Combine(languageFolder, scene + ".png")); scenePng.Save(sceneOutput);
+                }
             }
             var systemMenu = window.CreateLanguageMenu();
             ((System.Windows.Controls.MenuItem)systemMenu.Items[0]).RaiseEvent(new RoutedEventArgs(System.Windows.Controls.MenuItem.ClickEvent));
