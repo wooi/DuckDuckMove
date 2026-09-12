@@ -21,6 +21,18 @@ Open a release and choose a file under **Assets**:
 
 Both require **Windows 11 x64** and include the .NET runtime. Applying or resetting an avatar requires administrator approval. The portable app still saves avatar assets and backups to the system data folder. Files are unsigned test builds. Compatibility across accounts and Windows versions remains under verification. GitHub's **Source code** archives contain source, not the runnable app.
 
+## In action
+
+Real Windows recordings with usernames blurred. The sign-in screen was filmed with a phone; the Start menu was screen-recorded. These show the result on this PC, not compatibility with every Windows version or Microsoft account card.
+
+### Lock / sign-in screen
+
+![Lock / sign-in screen](docs/images/in-action/lockscreen.gif)
+
+### Start menu
+
+![Start menu](docs/images/in-action/start-menu.gif)
+
 ## Preview
 
 These screenshots are rendered from the actual WPF app in demo mode. The right panel is a layout illustration, not a capture of the Windows sign-in screen. The screenshots below show the English interface.

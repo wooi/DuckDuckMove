@@ -21,6 +21,18 @@ Na página da versão, escolha um ficheiro em **Assets**:
 
 Ambos requerem **Windows 11 x64** e incluem o runtime .NET. Aplicar ou repor o avatar requer autorização de administrador. A versão portátil também guarda imagens e cópias na pasta de dados do sistema. Os pacotes são versões de teste sem assinatura de código; a compatibilidade entre contas e versões do Windows continua em verificação. Os arquivos **Source code** do GitHub contêm código-fonte, não a aplicação executável.
 
+## Em ação
+
+Gravações reais do Windows com os nomes de utilizador desfocados. O ecrã de início de sessão foi filmado com um telemóvel; o menu Iniciar foi gravado diretamente. Mostram o resultado neste PC, não a compatibilidade com todas as versões do Windows nem com o cartão da conta Microsoft.
+
+### Ecrã de bloqueio / início de sessão
+
+![Ecrã de bloqueio / início de sessão](docs/images/in-action/lockscreen.gif)
+
+### Menu Iniciar
+
+![Menu Iniciar](docs/images/in-action/start-menu.gif)
+
 ## Pré-visualização
 
 Imagens geradas pela aplicação WPF real em modo de demonstração. O painel da direita ilustra o esquema; não é uma captura do ecrã de início de sessão do Windows. As capturas abaixo mostram a interface em português.

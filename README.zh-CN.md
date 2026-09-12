@@ -23,6 +23,18 @@
 
 **公开下载目前为 v0.1.3 测试版，尚未进行代码签名。不同账户和 Windows 版本的兼容性仍待验证。** 请阅读下方兼容性与验证状态；软件中的预览不代表 Windows 已应用成功。GitHub 自动生成的 Source code 压缩包是源码，不是可运行程序。
 
+## 实际效果
+
+以下为真实 Windows 效果，用户名已模糊处理。锁屏／登录界面由手机拍摄，开始菜单由系统录屏。仅展示这台电脑上的效果，不代表所有 Windows 版本或 Microsoft 账户卡片均支持。
+
+### 锁屏／登录界面
+
+![锁屏／登录界面](docs/images/in-action/lockscreen.gif)
+
+### 开始菜单
+
+![开始菜单](docs/images/in-action/start-menu.gif)
+
 ## 界面预览
 
 以下截图由实际 WPF 应用的演示模式渲染，右侧为布局示意，不是 Windows 登录画面的实机截图。

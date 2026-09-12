@@ -21,6 +21,18 @@ En la página de la versión, elige un archivo en **Assets**:
 
 Ambos requieren **Windows 11 x64** e incluyen .NET. Aplicar o restablecer requiere autorización de administrador. La versión portátil también guarda imágenes y copias en la carpeta de datos del sistema. Son versiones de prueba sin firma de código; la compatibilidad entre cuentas y versiones de Windows sigue en evaluación. Los archivos **Source code** de GitHub contienen código fuente, no la aplicación ejecutable.
 
+## En acción
+
+Grabaciones reales de Windows con los nombres de usuario difuminados. La pantalla de inicio de sesión se filmó con un teléfono; el menú Inicio se grabó directamente. Muestran el resultado en este PC, no la compatibilidad con todas las versiones de Windows ni con la tarjeta de cuenta Microsoft.
+
+### Pantalla de bloqueo / inicio de sesión
+
+![Pantalla de bloqueo / inicio de sesión](docs/images/in-action/lockscreen.gif)
+
+### Menú Inicio
+
+![Menú Inicio](docs/images/in-action/start-menu.gif)
+
 ## Vista previa
 
 Capturas generadas con la aplicación WPF real en modo de demostración. El panel derecho ilustra el diseño, no es una captura de la pantalla de inicio de sesión de Windows. Las capturas siguientes muestran la interfaz en español.
